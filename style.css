@@ -1,0 +1,125 @@
+*{
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family:san-serif;
+    color:white;  
+}
+body{
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    height:100vh; 
+    background-color:#020024; 
+}
+.container{
+    display:flex; 
+    justify-content:center; 
+    align-items:center; 
+    flex-direction:column;
+
+}
+.grid{
+    display:grid; 
+    grid-template-columns: repeat(3,80px);
+    grid-template-rows: repeat(3,80px);
+    background-color:yellow; 
+    border-radius:2rem; 
+    padding:1.3rem; 
+    align-items:center; 
+    row-gap: 10px;
+    column-gap:10px; 
+    border:2px solid white; 
+    box-shadow:2px 5px 8px yellow; 
+
+}
+.grid .boxes{
+    text-align:center; 
+    width:80px; 
+    height:80px; 
+    color:black;
+    padding:1.4rem; 
+    background-color:blue; 
+    margin:4px; 
+    border-radius:1rem; 
+    color:yellow; 
+    border:2px solid white;
+    box-shadow:2px 5px 8px black;  
+    font-size:1.5rem; 
+    font-weight:700; 
+    transition-property:all; 
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out; 
+}
+.boxes:hover{
+    background-color:rgb(60, 177, 81); 
+    color:black; 
+}
+.reset-btn{
+    background-color:yellow; 
+    color:black; 
+    padding:0.4rem; 
+    margin-top:1.3rem; 
+    border-radius:1rem; 
+    border:2px solid white; 
+    font-weight:700; 
+    cursor:pointer; 
+}
+.new-btn{
+    background-color:yellow; 
+    color:black; 
+    padding:0.4rem; 
+    margin-bottom:1.3rem; 
+    border-radius:1rem; 
+    border:2px solid white; 
+    font-weight:700; 
+    cursor:pointer; 
+}
+
+.result{
+    background-color:yellow; 
+    padding:1rem; 
+    margin:0.9rem; 
+    color:black; 
+    border-radius:1rem; 
+    font-weight:900; 
+
+}
+
+@media (max-width:400px){
+
+    .grid{
+        display:grid; 
+        grid-template-columns:repeat(3,50px);
+        grid-template-rows:repeat(3,50px);
+        background-color:yellow; 
+        border-radius:2rem; 
+        row-gap:10px;
+        column-gap:10px; 
+        justify-content:center;
+        align-content:center;
+    }
+
+    .grid .boxes{
+        width:50px;
+        height:50px;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        background-color:blue; 
+        border-radius:1rem; 
+
+        font-size:1rem; 
+        font-weight:600; 
+        color:yellow;
+
+        transition:all 0.3s ease-in-out;
+    }
+
+    .boxes:hover{
+        background-color:rgb(60, 177, 81); 
+        color:black; 
+    }
+}
